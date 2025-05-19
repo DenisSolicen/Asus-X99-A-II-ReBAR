@@ -63,7 +63,7 @@ afudos bios.rom /gan
 
 В обоих случаях, теперь у вас должен работать ReBAR для всех GPU (AMD / NVIDIA) которые его поддерживают.
 > [!NOTE] 
-> **NVIDIA**: серия Geforce GTX 16XX | RTX 20XX | RTX 30XX и выше. <br>
+> **NVIDIA**: серия Geforce GTX 16XX, RTX 20XX, RTX 30XX и выше. <br>
 > **AMD**: серия RX 6000 и выше.
 - Вы можете проверить это при помощи `GPU-Z` запустив и нажав на **Resizable BAR** элемент.
 > В GPU-Z во вкладке Advanced → Bus Interface должно отображаться:
