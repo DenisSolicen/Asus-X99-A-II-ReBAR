@@ -37,7 +37,7 @@ terminatorul / NvStrapsReBar
 afudos backup.rom /o
 ```
 - Ожидайте завершение процесса, по окончанию у вас появиться файл `backup.rom`
-- Теперь прошиваем наш новый биос командой:
+- Теперь, прошиваем наш новый биос командой:
 ```
 afudos bios.rom /gan
 ``` 
@@ -51,11 +51,11 @@ afudos bios.rom /gan
 - Сохраняем изменения и загружаемся в `Windows`.
 ## 4. Windows
 На видеокартах NVIDIA всё еще будет отображаться, что ReBAR не включен в BIOS, для этого:
-#### Если у вас NVIDIA RTX 30X и выше - используем программу `ReBarState.exe`
+#### Если у вас видеокарта NVIDIA RTX 30-й серии (или новее), используйте `ReBarState.exe`
 - Загрузите к себе на компьютер программу  `ReBarState.exe` из релизов [ReBAR UEFI](https://github.com/xCuri0/ReBarUEFI/releases).
 - Запускаем программу и вводим значение `32` (неограниченный размер Bar) и нажимаем `Enter`.
 - Если никаких ошибок не выдало, перезагружаем компьютер.
-#### Если у вас NVIDIA Turing GPU (20 or 16 series) и ниже - используем `NvStrapsReBar.exe`
+#### Если у вас видеокарта NVIDIA Turing GPU (20 или 16 серии), используйте `NvStrapsReBar.exe`
 - Загружаем к себе на компьютер программу `NvStrapsReBar.exe` из релизов [NvStrapsReBar](https://github.com/terminatorul/NvStrapsReBar/releases/tag/v0.3).
 - Запускаем программу, ожидаем отображения всей информации.
 - Находим цифру напротив модели вашего GPU и вбиваем её и нажимаем `Enter`.
