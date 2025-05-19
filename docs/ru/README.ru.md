@@ -69,7 +69,7 @@ afudos bios.rom /gan
 > В GPU-Z во вкладке Advanced → Bus Interface должно отображаться:
 "Resizable BAR: Enabled" (а не "Disabled" или "Not Supported")
 - При помощи NVIDIA Control Panel (для NVIDIA) нажав на `Информация о системе` - **Resizable BAR**.
-> Если ReBAR активен, в строке "Resizable BAR" будет значение "Yes".
+> Если ReBAR активен, в строке "Resizable BAR" будет значение "Да".
 
 ![GPU-Z Nvidia ReBAR](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/gpuz.png?raw=true)
 ![Nvidia Control Panel](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/nvidiacontrol.png?raw=true)
