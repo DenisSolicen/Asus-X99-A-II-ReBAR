@@ -1,7 +1,7 @@
 # Asus X99 A-II ReBAR
 [**English**](/README.md) | [**Русский**](./docs/ru/README.ru.md)
 
-Проверенный способ активации ReBAR на ASUS X99 A-II.
+Проверенный способ активации ReBAR (Resizable BAR) на ASUS X99 A-II.
 
 # Предыстория гайда
 Упрощенный и безопасный способ через `ASUS Flashback`, давал у меня, сдедующую реакцию **(удержание 3-сек, отпустить, три-мигания, постоянное свечение)**, что означает, что он отвергает файл прошивки, и отказывается его прошивать из-за сигнатуры.
@@ -60,8 +60,8 @@ afudos bios.rom /gan
 - Если всё успешно, и не было ошибок, перезагружаем компьютер.
 
 В обоих случаях, теперь у вас должен работать ReBAR для всех GPU (AMD / NVIDIA) которые его поддерживают.
-- Вы можете проверить это при помощи `GPU-Z` запустив и нажав на **Resiable BAR** элемент.
-- При помощи NVIDIA Control Panel (для NVIDIA) нажав на `Информация о системе` - **Resiable BAR**.
+- Вы можете проверить это при помощи `GPU-Z` запустив и нажав на **Resizable BAR** элемент.
+- При помощи NVIDIA Control Panel (для NVIDIA) нажав на `Информация о системе` - **Resizable BAR**.
 
 ![GPU-Z Nvidia ReBAR](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/gpuz.png?raw=true)
 ![Nvidia Control Panel](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/nvidiacontrol.png?raw=true)
