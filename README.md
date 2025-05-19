@@ -1,54 +1,71 @@
-# Asus X99 A-II ReBAR (Русский гайд)
-Проверенный способ активации ReBAR на ASUS X99 A-II.
+# Asus X99 A-II ReBAR
+[**English**](/README.md) | [**Русский**](./docs/ru/README.ru.md)
 
-# Исходники:
-Этот гайд является упрощенной и структурированной версией этого гайда:
+A proven way to activate ReBAR (Resizable BAR) on the ASUS X99 A-II.
+
+# Prequel
+A simplified and secure way through the `ASUS Flashback`, gave me the following reaction **(hold for 3 seconds, release, three blinks, constant blue glow)**, which means that it rejects the firmware file and refuses to flash it because of the signature.
+
+In this guide, I will consider a less secure method through the `FreeDOS` shell, which bypasses this method of protection, and successfully flashes the firmware even with a modified security signature.
+
+# Sources
+This guide is a simplified (to a single method) and structured version of this guide:
 - https://github.com/Mak3rde/AsusX99A-II-RezisableBar (by @Mak3rde)
 
 xCuri0 / ReBarUEFI
 - https://github.com/xCuri0/ReBarUEFI
 
-LongSoft / UEFITool
-- https://github.com/LongSoft/UEFITool/releases/tag/0.28.0
+terminatorul / NvStrapsReBar
+- https://github.com/terminatorul/NvStrapsReBar
 
-# Прошивка:
-### Если у вас нет своих собственных модификаций BIOS (иначе, что вы забыли тут?)
-## 1. Подготовка
-- Загрузите файл `X99-A-II-ASUS-2101_ROM_STOCKROM` из [основного гайда](https://github.com/Mak3rde/AsusX99A-II-RezisableBar) из секции `ready to use efi Downloads`.
-- Загрузите [AFUDOS](https://disk.yandex.ru/d/lW3H05ggRWaGiA), может быть удалена из-за жалоб правообладателей (искать в интернете).
-- Подготовьте флешку и отформатируйте её при помощи [Rufus](https://rufus.ie/en/) в вид `FreeDOS` формат FAT 32 MBR.
-- После подгтовки, перекиньте все файлы из архива `AFUDOS` на флешку в корневую папку.
-- Перекиньте файл прошивки из архива `X99-A-II-ASUS-2101_ROM_STOCKROM` на флешку в корневую папку.
-- Переименуйте его в `bios.rom` для упрощения работы с ним в среде DOS.
-- Выключите компьютер, (опционально: включите CSM в настройках BIOS) загрузитесь с флешки с FreeDOS.
+# Firmware
+> [!CAUTION]
+>  Only if you don't have your own BIOS modifications (otherwise, what are you doing here?)
+## 1. Preparation
+- Download the file `X99-A-II-ASUS-2101_ROM_STOCKROM` from [main guide](https://github.com/Mak3rde/AsusX99A-II-RezisableBar ) from the `ready to use efi Downloads` section.
+- Download [AFUDOS](https://disk.yandex.ru/d/lW3H05ggRWaGiA), may be deleted due to complaints from copyright holders (search in the Internet).
+- Prepare the flash drive and format it using [Rufus](https://rufus.ie/en/) in the form of `FreeDOS` FAT 32 MBR format.
+- After dictation, transfer all files from the `AFUDOS` archive to the flash drive in the root folder.
+- Transfer the firmware file from the archive `X99-A-II-ASUS-2101_ROM_STOCKROM` to the flash drive in the root folder.
+- Rename it to `bios.rom` to simplify working with it in a `DOS` environment.
+- Turn off the computer, (optional: turn on CSM in the BIOS settings) boot from a USB flash drive with FreeDOS.
 ## 2. FreeDOS
-- Выберите **Английскую раскладку клавиатуры** после запуска FreeDOS
-![FreeDOS Language](http://xeonlive.ru/images/materials/instructions/afudos/3.jpg)
-- Сделайте бекап текущей прошивки (на всякий случай):
+- Select **English keyboard layout** after launching FreeDOS
+![FreeDOS Language](http://xeonlive.ru/images/materials/instructions/afudos/3.jpg )
+- Make a backup of the current firmware (just in case):
 ```
 afudos backup.rom /o
 ```
-- Ожидайте завершение процесса, по окончанию у вас появиться файл `backup.rom`
-- Теперь прошиваем наш новый биос командой:
+- Wait for the process to complete, at the end you will have the file `backup.rom`
+- Now we flash our new bios with the command:
 ```
 afudos bios.rom /gan
 ``` 
-- Ожидаете завершение процесса прошивки.
-- По окончанию прошивки, перезагружайтесь в BIOS и вынимайте флешку.
+- Waiting for the completion of the firmware process.
+- At the end of the firmware, reboot into the BIOS and remove the USB flash drive.
 ## 3. BIOS
-Все настройки сбросились до стандартных, так и должно быть.
-- Зайдите в раздел `Boot` и включите `Above 4G Decoding` (установите положение `Enabled`) для работы ReBAR.
-- Перейдите в раздел `CSM` и установите значение `Disabled` для работы ReBAR.
-- Если вам нужно восстановить еще какие-то настройки, то восстановите их.
-- Сохраняем изменения и загружаемся в `Windows`.
+All settings have been reset to standard, as they should be.
+- Go to the `Boot` section and turn on `Above 4G Decoding` (set the `Enabled` position) for ReBAR work.
+- Go to the `CSM` section and set the value to `Disabled` for ReBAR work.
+- If you need to restore any more settings, then restore them.
+- Save the changes and boot into Windows.
 ## 4. Windows
-На видеокартах NVIDIA всё еще будет отображаться, что ReBAR не включен в BIOS, для этого:
-#### Если у вас NVIDIA RTX 30X и выше - используем программу `ReBarState.exe`
-- Запускаем программу и вводим значение 32 (неограниченный размер Bar) и нажимаем `Enter`.
-- Если никаких ошибок не выдало, перезагружаем компьютер.
-#### Если у вас NVIDIA Turing GPU (20 or 16 series) и ниже - используем `NvStrapsReBar.exe`
-- Запускаем программу.
-- Находим цифру напротив модели вашего GPU и вбиваем её и нажием `Enter`.
-- Если всё успешно, и не было ошибок, перезагружаем компьютер.
+NVIDIA graphics cards will still display that ReBAR is not enabled in the BIOS, for this:
+#### If you have NVIDIA RTX 30X and higher, use the program `ReBarState.exe`
+- Launch the program and enter the value 32 (unlimited Bar size) and press `Enter`.
+- If there are no errors, restart the computer.
+#### If you have an NVIDIA Turing GPU (20 or 16 series) and lower, we use `NvStrapsReBar.exe`
+- Launch the program `NvStrapsReBar.exe` and wait.
+- Find the number opposite the model of your GPU and **enter it** and press `Enter`.
+- If everything is successful and there were no errors, restart the computer.
 
-В обоих случаях, теперь у вас должен работать ReBAR для всех GPU (AMD / NVIDIA) которые его поддерживают.
+In both cases, ReBAR should now work for all GPUs (AMD/NVIDIA) that support it.
+- You can check this using `GPU-Z` by launching and clicking on the **Resizable BAR** element.
+- Using NVIDIA Control Panel (for NVIDIA) by clicking on `System Information` - **Resizable BAR**.
+
+![GPU-Z Nvidia ReBAR](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/gpuz.png?raw=true)
+![Nvidia Control Panel](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/nvidiacontrol.png?raw=true)
+
+*Congratulations, now ReBAR (Resizable BAR) is working stably on the board that originally did not have its support!*
+- If the guide was useful, I ask you to put *a star in the repository (click at `Star` on the top right)*.
+- Do the same with in the [original guide](https://github.com/Mak3rde/AsusX99A-II-RezisableBar), without **him**, this guide would not exist, thank you!
