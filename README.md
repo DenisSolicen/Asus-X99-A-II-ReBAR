@@ -62,8 +62,13 @@ NVIDIA graphics cards will still display that ReBAR is not enabled in the BIOS, 
 - If everything is successful and there were no errors, restart the computer.
 
 In both cases, ReBAR should now work for all GPUs (AMD/NVIDIA) that support it.
+> [!NOTE] 
+> **NVIDIA**: Geforce GTX 16XX, RTX 20XX, RTX 30XX and above. <br>
+> **AMD**: RX 6000 series and above.
 - You can check this using `GPU-Z` by launching and clicking on the **Resizable BAR** element.
+> In GPU-Z, the Advanced → Bus Interface tab should display: "Resizable BAR: Enabled" (not "Disabled" or "Not Supported")
 - Using NVIDIA Control Panel (for NVIDIA) by clicking on `System Information` - **Resizable BAR**.
+> If ReBAR is active, the "Resizable BAR" row will have the value "Yes".
 
 ![GPU-Z Nvidia ReBAR](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/gpuz.png?raw=true)
 ![Nvidia Control Panel](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/nvidiacontrol.png?raw=true)
