@@ -56,6 +56,7 @@ NVIDIA graphics cards will still display that ReBAR is not enabled in the BIOS, 
 - Launch the program (as admin) and enter the value 32 (unlimited Bar size) and press `Enter`.
 - If there are no errors, restart the computer.
 #### If you have an NVIDIA Turing GPU (20 or 16 series) and lower, we use `NvStrapsReBar.exe`
+- Download `NvStrapsReBar.exe` from [NvStrapsReBar](https://github.com/terminatorul/NvStrapsReBar/releases) releases.
 - Launch the program `NvStrapsReBar.exe` and wait.
 - Find the number opposite the model of your GPU and **enter it** and press `Enter`.
 - If everything is successful and there were no errors, restart the computer.
