@@ -25,7 +25,7 @@ terminatorul / NvStrapsReBar
 - Download the file `X99-A-II-ASUS-2101_ROM_STOCKROM` from [main guide](https://github.com/Mak3rde/AsusX99A-II-RezisableBar ) from the `ready to use efi Downloads` section.
 - Download [AFUDOS](https://disk.yandex.ru/d/lW3H05ggRWaGiA), may be deleted due to complaints from copyright holders (search in the Internet).
 - Prepare the flash drive and format it using [Rufus](https://rufus.ie/en/) in the form of `FreeDOS` FAT 32 MBR format.
-- After dictation, transfer all files from the `AFUDOS` archive to the flash drive in the root folder.
+- After format process, transfer all files from the `AFUDOS` archive to the flash drive in the root folder.
 - Transfer the firmware file from the archive `X99-A-II-ASUS-2101_ROM_STOCKROM` to the flash drive in the root folder.
 - Rename it to `bios.rom` to simplify working with it in a `DOS` environment.
 - Turn off the computer, (optional: turn on CSM in the BIOS settings) boot from a USB flash drive with FreeDOS.
