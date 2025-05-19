@@ -55,7 +55,7 @@ afudos bios.rom /gan
 - Загрузите к себе на компьютер программу  `ReBarState.exe` из релизов [ReBAR UEFI](https://github.com/xCuri0/ReBarUEFI/releases).
 - Запускаем программу и вводим значение `32` (неограниченный размер Bar) и нажимаем `Enter`.
 - Если никаких ошибок не выдало, перезагружаем компьютер.
-#### Если у вас видеокарта NVIDIA Turing GPU (20 или 16 серии), используйте `NvStrapsReBar.exe`
+#### Если у вас видеокарта NVIDIA Turing (20-й или 16-й серии), используйте `NvStrapsReBar.exe`
 - Загружаем к себе на компьютер программу `NvStrapsReBar.exe` из релизов [NvStrapsReBar](https://github.com/terminatorul/NvStrapsReBar/releases/tag/v0.3).
 - Запускаем программу, ожидаем отображения всей информации.
 - Находим цифру напротив модели вашего GPU и вбиваем её и нажимаем `Enter`.
