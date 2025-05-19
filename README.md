@@ -52,7 +52,8 @@ All settings have been reset to standard, as they should be.
 ## 4. Windows
 NVIDIA graphics cards will still display that ReBAR is not enabled in the BIOS, for this:
 #### If you have NVIDIA RTX 30X and higher, use the program `ReBarState.exe`
-- Launch the program and enter the value 32 (unlimited Bar size) and press `Enter`.
+- Download `ReBarState.exe` from [ReBabUEFI](https://github.com/xCuri0/ReBarUEFI/releases) releases.
+- Launch the program (as admin) and enter the value 32 (unlimited Bar size) and press `Enter`.
 - If there are no errors, restart the computer.
 #### If you have an NVIDIA Turing GPU (20 or 16 series) and lower, we use `NvStrapsReBar.exe`
 - Launch the program `NvStrapsReBar.exe` and wait.
