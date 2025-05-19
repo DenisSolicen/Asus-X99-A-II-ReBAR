@@ -62,8 +62,14 @@ afudos bios.rom /gan
 - Если всё успешно, и не было ошибок, перезагружаем компьютер.
 
 В обоих случаях, теперь у вас должен работать ReBAR для всех GPU (AMD / NVIDIA) которые его поддерживают.
+> [!NOTE] 
+> **NVIDIA**: серия Geforce GTX 16XX | RTX 20XX | RTX 30XX и выше. <br>
+> **AMD**: серия RX 6000 и выше.
 - Вы можете проверить это при помощи `GPU-Z` запустив и нажав на **Resizable BAR** элемент.
+> В GPU-Z во вкладке Advanced → Bus Interface должно отображаться:
+"Resizable BAR: Enabled" (а не "Disabled" или "Not Supported")
 - При помощи NVIDIA Control Panel (для NVIDIA) нажав на `Информация о системе` - **Resizable BAR**.
+> Если ReBAR активен, в строке "Resizable BAR" будет значение "Yes".
 
 ![GPU-Z Nvidia ReBAR](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/gpuz.png?raw=true)
 ![Nvidia Control Panel](https://github.com/DenisSolicen/Asus-X99-A-II-ReBAR/blob/main/img/nvidiacontrol.png?raw=true)
